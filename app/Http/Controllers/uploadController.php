@@ -78,9 +78,14 @@ class uploadController extends Controller
         //     return 'File Moved.';
         // }
 
-        $rewContent =Storage::get('public/bitfumes.jpg');
-        if(Storage::put('newImage.jpg', $rewContent)){
-            return 'File 2 is created';
+        // $rewContent = Storage::get('public/bitfumes.jpg');
+        // if(Storage::put('newImage.jpg', $rewContent)){
+        //     return 'File 2 is created';
+        // }
+
+
+        if( Storage::delete('public/FuhDVHQFpKMMb64jQBu1EsWpzBBIVflthtxvOVUQ.jpeg', 'public/bitfumes.jpg') ){
+            return 'File is deelted';
         }
     }
 

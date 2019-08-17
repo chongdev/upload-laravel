@@ -16,8 +16,12 @@ Route::get('/', function () {
 });
 
 
-Route::get('/file', 'fileController@index');
-Route::get('/file/store', 'fileController@store');
+Route::get('/media', 'mediaController@show')->name('upload.media');
+Route::post('/media', 'mediaController@store');
 
 
 Route::resource('/upload', 'uploadController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
